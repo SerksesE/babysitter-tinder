@@ -7,46 +7,58 @@ export class ParentsContainer extends Component {
         parents: [
             {
                 id: 1,
-                ageOfChildren: 2,
+                userName: 'baby1',
+                userPassword: '123456',
+                agePrefer: 2,
                 numberOfChildren: 1,
-                feeInEuros: 12,
+                feeRequired: 12,
                 experienceInYears: 2,
-                location: 1
+                locationAms: true
             }, {
                 id: 2,
-                ageOfChildren: 1,
+                userName: 'baby2',
+                userPassword: '123456',
+                agePrefer: 1,
                 numberOfChildren: 2,
-                feeInEuros: 6,
+                feeRequired: 6,
                 experienceInYears: 3,
-                location: 1
+                locationAms: true
             }, {
                 is: 3,
-                ageOfChildren: 3,
+                userName: 'baby3',
+                userPassword: '123456',
+                agePrefer: 3,
                 numberOfChildren: 3,
-                feeInEuros: 12,
+                feeRequired: 12,
                 experienceInYears: 5,
-                location: 1
+                locationAms: false
             }, {
                 id: 4,
-                ageOfChildren: 4,
+                userName: 'baby4',
+                userPassword: '123456',
+                agePrefer: 4,
                 numberOfChildren: 4,
-                feeInEuros: 8,
+                feeRequired: 8,
                 experienceInYears: 8,
-                location: 1
+                locationAms: true
             }, {
                 id: 5,
-                ageOfChildren: 12,
+                userName: 'baby5',
+                userPassword: '123456',
+                agePrefer: 12,
                 numberOfChildren: 2,
-                feeInEuros: 15,
+                feeRequired: 15,
                 experienceInYears: 3,
-                location: 1
+                locationAms: true
             }, {
                 id: 6,
-                ageOfChildren: 7,
+                userName: 'baby6',
+                userPassword: '123456',
+                agePrefer: 7,
                 numberOfChildren: 1,
-                feeInEuros: 10,
+                feeRequired: 10,
                 experienceInYears: 1,
-                location: 1
+                locationAms: true
             }
         ]
     }
