@@ -1,22 +1,13 @@
 export const LOGIN = 'LOGIN'
 
-// export function handleOnclick(user,pass) {
-//     return {
-//       type: LOGIN,
-//       payload: {
-//         id,
-//         title
-//       }
-//     }
-//   }
-
-export function handleOnclick(user,pass) {
-    const loginsuccess = this.state.Parents.map()
-    return {
-      type: LOGIN,
-      payload: {
-        id,
-        title
+export function login () {
+  return {
+    type: 'LOGIN',
+    payload: {
+      user: this.parents.feeInEuros,
+      pass: this.parents.experienceInYears,
+      show: console.log('login action')
       }
-    }
+      
   }
+}

@@ -1,5 +1,4 @@
 import {LOGIN} from '../actions/login'
-const initState = {}
 
 export default (state = {}, action = {}) => {
     switch (action.type) {
