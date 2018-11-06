@@ -1,8 +1,8 @@
 import { createStore } from 'redux'
-import reducer from './reducers/reducer'
+import sitters from './reducers/sitters'
 
 const enhancer = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-const store = createStore(reducer, enhancer)
+const store = createStore(sitters, enhancer)
 
 export default store
