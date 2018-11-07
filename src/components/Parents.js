@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 export class Parents extends Component {
   render() {
@@ -9,7 +10,7 @@ export class Parents extends Component {
     <p>You want your babysitter has: <b>{this.props.expYears}</b> year(s) experience</p>
     <p>You want your babysitter lives in Amsterdam: <b>{this.props.location}</b></p>
     <p>Let's Click on "Find Your Match" to see</p>
-    <button onclick = "findyourmatch">Find Your Match</button>  
+    <Link to={'/matches'} ><button onclick = "findyourmatch">Find Your Match</button></Link>  
     </li>
   }
 }
