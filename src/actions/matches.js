@@ -1,13 +1,13 @@
 export const ADD_MATCHES = 'ADD_MATCHES'
 
-export function addMatches(name, age, yearsOfExperience) {
+export function addMatches(name, age, location, feeInEuros) {
   return {
     type: 'ADD_MATCHES',
     payload: {
       name,
       age,
-      yearsOfExperience,
-      show: console.log('action')
+      location, 
+      feeInEuros
     }
   }
 }

@@ -3,71 +3,44 @@ import Matches from './Matches'
 import { connect } from 'react-redux'
 import { addMatches } from '../actions/matches'
 
-const initialState = {
-  sitters: [
-    {
-      name: 'Jessica',
-      age: 27,
-      feeInEuros: 15,
-      yearsOfExperience: 4,
-      location: 'Amsterdam',
-      id: 1
-
-    }, {
-      name: 'Kim',
-      age: 17,
-      feeInEuros: 10,
-      yearsOfExperience: 4,
-      location: 'Amsterdam',
-      id: 2
-    }, {
-      name: 'Anna',
-      age: 37,
-      feeInEuros: 15,
-      yearsOfExperience: 4,
-      location: 'Amsterdam',
-      id: 3
-    }, {
-      name: 'Lisa',
-      age: 47,
-      feeInEuros: 85,
-      yearsOfExperience: 4,
-      location: 'Amsterdam',
-      id: 4
-    }, {
-      name: 'Rien',
-      age: 73,
-      feeInEuros: 15,
-      yearsOfExperience: 4,
-      location: 'Amsterdam',
-      id: 5
-    }, {
-      name: 'Asley',
-      age: 41,
-      feeInEuros: 15,
-      yearsOfExperience: 4,
-      location: 'Amsterdam',
-      id: 6
-    }
-  ]
-}
-
 class MatchesContainer extends Component {
+  state = { displayData: false }
 
-  handleClick = () => {
-    console.log(addMatches)
-    initialState.sitters.map(sitter => this.props.addMatches(sitter.name, sitter.age))
+  displayData = () => {
+    this.setState({
+      displayData: !this.state.displayData
+    })
+  }
+
+  renderMatches = () => {
+    if (this.state.displayData === true) {
+      return this.props.sitters.map(sitter => <li className='sitter' key={sitter.id}>
+        {sitter.name} | {sitter.age} | {sitter.location} | {sitter.feeInEuros}</li>)
+    }
+    return null
   }
 
   render() {
-    return <Matches sitters={this.props.matches} onClick={this.handleClick} />
+    return (
+    <Matches
+      sitters={this.props.sitters}
+      onClick={this.displayData}
+      renderMatches={this.renderMatches}
+      status={this.state}
+    />
+    )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    matches: state.matches
+    sitters: state.matches
   }
 }
 
 export default connect(mapStateToProps, { addMatches })(MatchesContainer)
+
+
+  // handleClick = () => {
+  //   this.props.sitters.map(sitter => this.props.addMatches(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
+  // }
