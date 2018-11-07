@@ -6,7 +6,7 @@ export default function Matches(props) {
   return (
     <div>
       <h1 className='matches'>You have {props.sitters.length} Sitter matches!</h1>
-      <button onClick={() => props.onClick()}>Show matches!</button>
+      <button onClick={() => props.onClick()}>{props.status.displayData ? 'Hide matches' : 'Show matches!'}</button>
       <ul>
         {props.renderMatches()}
       </ul>
@@ -16,13 +16,14 @@ export default function Matches(props) {
 
 
 
-
     // <div>
-    //   <button onClick={props.displayData()}>Show Matches</button>
+    //   <button onClick={() => props.onClick()}>{props.status.displayData ? 'Hide matches' : 'Show matches!'}</button>
     //   <div className='sitterContainer'>
     //     <img alt='profile picture' />
-    //     <h1>{props.sitters.name}, {props.sitters.age}</h1>
-    //     <p>{props.sitters.description}</p>
-
+    //     <div>
+    //       {props.renderName()}
+    //       {props.renderDescription()}
+    //     </div>
     //   </div>
     // </div>
+

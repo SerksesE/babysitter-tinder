@@ -14,16 +14,21 @@ class MatchesContainer extends Component {
 
   renderMatches = () => {
     if (this.state.displayData === true) {
-      console.log('I should render something now')
       return this.props.sitters.map(sitter => <li className='sitter' key={sitter.id}>
         {sitter.name} | {sitter.age} | {sitter.location} | {sitter.feeInEuros}</li>)
     }
-    console.log('I\' shouldn\'t be rendering')
     return null
   }
 
   render() {
-    return <Matches sitters={this.props.sitters} onClick={this.displayData} renderMatches={this.renderMatches} status={this.state}/>
+    return (
+    <Matches
+      sitters={this.props.sitters}
+      onClick={this.displayData}
+      renderMatches={this.renderMatches}
+      status={this.state}
+    />
+    )
   }
 }
 
