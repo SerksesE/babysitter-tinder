@@ -1,13 +1,11 @@
 export const LOGIN = 'LOGIN'
 
-export function login () {
+export function login(user, password) {
   return {
     type: 'LOGIN',
     payload: {
-      user: this.parents.feeInEuros,
-      pass: this.parents.experienceInYears,
-      show: console.log('login action')
-      }
-      
+      user,
+      password,
+      } 
   }
 }

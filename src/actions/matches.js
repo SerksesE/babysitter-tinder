@@ -11,8 +11,3 @@ export function addMatches(name, age, location, feeInEuros) {
     }
   }
 }
-
-
-
-
-

@@ -1,62 +1,104 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { login } from '../actions/login'
-import { ParentsContainer } from './components/ParentsContainer'
 
-class LoginButton extends Component {
-    renderlogin = () => {
-        console.log('Looking for matches!')
-        console.log(this.props.login())
-        this.props.loginOk();
 
-        render() {
-            return (
-                <ParentsContainer />
-            )
-        }
+// const currentList = {
+//     parents: [
+//         {
+//             id: 1,
+//             userName: 'user1',
+//             userPassword: '123456',
+//             ageOfChildren: 2,
+//             numberOfChildren: 1,
+//             feeInEuros: 12,
+//             experienceInYears: 2,
+//             locationAms: 'yes'
+//         }, {
+//             id: 2,
+//             userName: 'user2',
+//             userPassword: '123456',
+//             ageOfChildren: 1,
+//             numberOfChildren: 2,
+//             feeInEuros: 6,
+//             experienceInYears: 3,
+//             locationAms: 'yes'
+//         }, {
+//             id: 3,
+//             userName: 'user3',
+//             userPassword: '123456',
+//             ageOfChildren: 3,
+//             numberOfChildren: 3,
+//             feeInEuros: 12,
+//             experienceInYears: 5,
+//             locationAms: 'yes'
+//         }, {
+//             id: 4,
+//             userName: 'user4',
+//             userPassword: '123456',
+//             ageOfChildren: 4,
+//             numberOfChildren: 4,
+//             feeInEuros: 8,
+//             experienceInYears: 8,
+//             locationAms: 'yes'
+//         }, {
+//             id: 5,
+//             userName: 'user5',
+//             userPassword: '123456',
+//             ageOfChildren: 12,
+//             numberOfChildren: 2,
+//             feeInEuros: 15,
+//             experienceInYears: 3,
+//             locationAms: 'yes'
+//         }, {
+//             id: 6,
+//             userName: 'user6',
+//             userPassword: '123456',
+//             ageOfChildren: 7,
+//             numberOfChildren: 1,
+//             feeInEuros: 10,
+//             experienceInYears: 1,
+//             locationAms: 'yes'
+//         }
+//     ]
+// }
+
+export class LoginButton extends Component {
+    handleLogin = () => {
+        // currentList.parents.map(parent => this.props.login(parent.userName, parent.userPassword))
+        console.log(login('user1', '123456'))
     }
 
-    const mapStateToProps = (state) => {
-        return {
-          login: state.login
-        }
-      }
-      
-      export default connect(mapStateToProps, {login})(LoginButton)
+    // handleLogin = (id) => {
+    //     const status = currentList.parents.filter(
+    //         parent => { return parent.id === id }
+    //     )
+    //     this.setState({ parents: status })
+    //     console.log(status)
+    //     console.log(login('user1', '123456'))
+    // }
 
 
-// import { Matches } from './Matches'
-// import { connect } from 'react-redux'
-// import { showMatches } from '../actions/showMatches'
+    // checkLogin = (id) => {
+    //     const status = currentList.parents.filter(
+    //         parent => { return parent.id === id }
+    //     )
+    //     this.setState({ parents: status })
+    // }
 
-// class MatchesContainer extends Component {
-//   state = {
-//     parents: {
-//       id: 1,
-//       ageOfChildren: 2,
-//       numberOfChildren: 1,
-//       feeInEuros: 12,
-//       experienceInYears: 2,
-//       location: 1
-//     }
-//   }
+    render() {
+        return (
+            <div>
+                <button onClick={this.handleLogin}>Login</button>
+            </div>
+        )
+    }
+}
 
-//   renderMatches = () => {
-//     console.log('Looking for matches!')
-//     console.log(this.props.showMatches())
-//     this.props.showMatches();
+const mapStateToProps = (state) => {
+    return {
+        loginOk: state.loginOk
+    }
+}
 
-//   }
-
-//   render() {
-//     return <Matches sitters={this.props.sitters} onClick={this.renderMatches} />
-//   }
-// }
-
-// const mapStateToProps = state => {
-//   return {
-//     sitters: state.sitters
-//   }
-// }
-
-// export default connect(mapStateToProps, {showMatches})(MatchesContainer)
+export default connect(mapStateToProps, { login })(LoginButton)
