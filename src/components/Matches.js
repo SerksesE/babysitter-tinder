@@ -1,20 +1,28 @@
 import * as React from 'react';
+import '../styles/matches.css'
 
 export default function Matches(props) {
-  console.log(props.sitters)
+  console.log(props.status)
   return (
     <div>
-      <h1>Sitter matches!</h1>
-      <button onClick={() => props.onClick()}>Find my matches!</button>
+      <h1 className='matches'>You have {props.sitters.length} Sitter matches!</h1>
+      <button onClick={() => props.onClick()}>Show matches!</button>
       <ul>
-        {props.sitters && props.sitters.map(sitter =>
-          <li key={sitter.id}>Name: {sitter.name}
-            Age: {sitter.age}
-            
-            Fee: {sitter.feeInEuros}</li>)}
+        {props.renderMatches()}
       </ul>
     </div>
   )
 }
 
 
+
+
+    // <div>
+    //   <button onClick={props.displayData()}>Show Matches</button>
+    //   <div className='sitterContainer'>
+    //     <img alt='profile picture' />
+    //     <h1>{props.sitters.name}, {props.sitters.age}</h1>
+    //     <p>{props.sitters.description}</p>
+
+    //   </div>
+    // </div>
