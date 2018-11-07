@@ -24,7 +24,7 @@ export class ParentsContainer extends Component {
                 experienceInYears: 3,
                 locationAms: 'yes'
             }, {
-                is: 3,
+                id: 3,
                 userName: 'user3',
                 userPassword: '123456',
                 ageOfChildren: 3,
@@ -76,14 +76,18 @@ export class ParentsContainer extends Component {
         )
     }
 
-
     render() {
+        const i = Math.ceil(Math.random() * 6)
         return (
             <div className="parentsContainer">
-                <ul>
-                    {this.state.parents.map(this.renderParents)}
-                </ul>
+                {this.state.parents
+                    .filter(arr => { return arr.id === i })
+                    .map(this.renderParents)
+                }
+
             </div>
         );
     }
 }
+
+// {this.state.parents.map(this.renderParents)}

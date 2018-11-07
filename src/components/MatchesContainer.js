@@ -55,6 +55,7 @@ const initialState = {
 class MatchesContainer extends Component {
 
   handleClick = () => {
+    console.log(addMatches)
     initialState.sitters.map(sitter => this.props.addMatches(sitter.name, sitter.age))
   }
 
