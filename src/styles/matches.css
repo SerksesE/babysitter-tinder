@@ -26,7 +26,7 @@ h1.matches {
   font-size: 40px;
 }
 
-li {
+/* li {
   display: flex;
   align-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@ li {
   font-weight: bold;
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 7px;
-}
+} */
 
 ul {
   width: 500px;
