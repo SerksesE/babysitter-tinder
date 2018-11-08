@@ -5,11 +5,31 @@ export default function Matches(props) {
   console.log(props.status)
   return (
     <div>
-      <h1 className='matches'>You have {props.sitters.length} Sitter matches!</h1>
-      <button onClick={() => props.onClick()}>{props.status.displayData ? 'Hide matches' : 'Show matches!'}</button>
-      <ul>
-        {props.renderMatches()}
-      </ul>
+      <div>
+        <h1 className='matches'>You have {props.sitters.length} Sitter matches in total!</h1>
+      </div>
+
+      <div className='filtercontainer'>
+
+
+        <div className='filter'>
+
+          <button onClick={() => props.renderReset()}>Reset search</button>
+          <div>
+            <button onClick={() => props.renderCityAlkmaar()}>Alkmaar</button>
+            <button onClick={() => props.renderCityRotterdam()}>Rotterdam</button>
+            <button onClick={() => props.renderCityAmsterdam()}>Amsterdam</button>
+            <button onClick={() => props.renderCityLutjebroek()}>Lutjebroek</button>
+          </div>
+          <button onClick={() => props.displayData()}>{props.status.displayData ? 'Hide matches' : 'Show matches!'}</button>
+        </div>
+
+        <div className='result'>
+          <ul>
+            {props.renderMatches()}
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
