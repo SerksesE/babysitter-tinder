@@ -1,4 +1,4 @@
-import { RENDER_CITY_ALKMAAR, RENDER_CITY_AMSTERDAM, RENDER_CITY_ROTTERDAM, RENDER_CITY_LUTJEBROEK, RENDER_RESET } from '../actions/matches'
+import { RENDER_CITY_ALKMAAR, RENDER_CITY_AMSTERDAM, RENDER_CITY_ROTTERDAM, RENDER_CITY_HAARLEM, RENDER_RESET} from '../actions/matches'
 
 const initialState = [
   {
@@ -156,7 +156,7 @@ const initialState = [
     age: 47,
     feeInEuros: '10,-',
     yearsOfExperience: 4,
-    location: 'Lutjebroek',
+    location: 'Haarlem',
     id: 65,
     description: 'Hi! My name is ... and I like to watch kids.',
     gender: 'Female',
@@ -166,7 +166,7 @@ const initialState = [
     age: 73,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
-    location: 'Lutjebroek',
+    location: 'Haarlem',
     id: 66,
     description: 'Hi! My name is ... and I like to watch kids.',
     gender: 'Female',
@@ -176,7 +176,7 @@ const initialState = [
     age: 41,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
-    location: 'Lutjebroek',
+    location: 'Haarlem',
     id: 67,
     description: 'Hi! My name is ... and I like to watch kids.',
     gender: 'Female',
@@ -186,7 +186,7 @@ const initialState = [
     age: 73,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
-    location: 'Lutjebroek',
+    location: 'Haarlem',
     id: 68,
     description: 'Hi! My name is ... and I like to watch kids.',
     gender: 'Female',
@@ -196,7 +196,7 @@ const initialState = [
     age: 41,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
-    location: 'Lutjebroek',
+    location: 'Haarlem',
     id: 69,
     description: 'Hi! My name is ... and I like to watch kids.',
     gender: 'Female',
@@ -212,11 +212,10 @@ export default (state = [...initialState], action = {}) => {
       return state.filter(sitter => sitter.location === 'Amsterdam')
     case RENDER_CITY_ROTTERDAM:
       return state.filter(sitter => sitter.location === 'Rotterdam')
-    case RENDER_CITY_LUTJEBROEK:
-      return state.filter(sitter => sitter.location === 'Lutjebroek')
+    case RENDER_CITY_HAARLEM:
+      return state.filter(sitter => sitter.location === 'Haarlem')
     case RENDER_RESET:
       return [...initialState]
-
     default:
       return state
   }

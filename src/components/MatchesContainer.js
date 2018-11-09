@@ -1,57 +1,70 @@
 import React, { Component } from 'react'
 import Matches from './Matches'
 import { connect } from 'react-redux'
-import { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityLutjebroek, renderReset } from '../actions/matches'
+import { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset } from '../actions/matches'
+import { displayData } from '../actions/displayData'
+
+// import { changeCityName } from '../actions/changeCityName'
 
 
 class MatchesContainer extends Component {
-  state = { displayData: false }
+  // state = { displayData: false }
 
-  displayData = () => {
-    this.setState({
-      displayData: !this.state.displayData
-    })
+  toggleDisplay = () => {
+    // this.setState({
+    //   displayData: !this.state.displayData 
+    // })
+    this.props.displayData()
+    // if (this.props.displayData === true) {
+    //   return this.props.sitters.map(sitter => <li className='sitter' key={sitter.id}>
+    //     {sitter.name} | {sitter.age} | {sitter.location} | {sitter.feeInEuros}</li>)
+    // }
+    // return null
   }
 
   renderCityAlkmaar = () => {
-    return this.props.sitters.map(sitter => this.props.renderCityAlkmaar(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
+    this.props.renderReset()
+    this.props.renderCityAlkmaar();
   }
 
   renderCityAmsterdam = () => {
-    return this.props.sitters.map(sitter => this.props.renderCityAmsterdam(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
+    this.props.renderReset()
+    this.props.renderCityAmsterdam();
   }
 
   renderCityRotterdam = () => {
-    return this.props.sitters.map(sitter => this.props.renderCityRotterdam(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
+    this.props.renderReset()
+    this.props.renderCityRotterdam();
   }
 
-  renderCityLutjebroek = () => {
-    return this.props.sitters.map(sitter => this.props.renderCityLutjebroek(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
+  renderCityHaarlem = () => {
+    this.props.renderReset()
+    this.props.renderCityHaarlem();
   }
 
   renderReset = () => {
-    this.props.renderReset()
+    this.props.renderReset();
   }
 
   renderMatches = () => {
-    if (this.state.displayData === true) {
-      return this.props.sitters.map(sitter => <li className='sitter' key={sitter.id}>
+      return this.props.sitters.map(sitter => <li onClick={alert} className='sitter' key={sitter.id}>
         {sitter.name} | {sitter.age} | {sitter.location} | {sitter.feeInEuros}</li>)
-    }
-    return null
   }
 
   render() {
+    console.log(displayData)
     return (
     <Matches
       sitters={this.props.sitters}
-      displayData={this.displayData}
+      toggleDisplay={this.toggleDisplay}
       renderMatches={this.renderMatches}
-      status={this.state}
+      displayDataActive={this.props.displayDataActive}
+      city={this.props.city}
       renderCityAlkmaar={this.renderCityAlkmaar}
+      renderAlkmaar={this.renderAlkmaar}
       renderCityRotterdam={this.renderCityRotterdam}
       renderCityAmsterdam={this.renderCityAmsterdam}
-      renderCityLutjebroek={this.renderCityLutjebroek}
+      renderCityHaarlem={this.renderCityHaarlem}
       renderReset={this.renderReset}
     />
     )
@@ -60,13 +73,16 @@ class MatchesContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    sitters: state.matches
+    sitters: state.matches,
+    displayDataActive: state.displayData,
+    city: state.changeCityName.cityName
   }
 }
 
-export default connect(mapStateToProps, { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityLutjebroek, renderReset })(MatchesContainer)
+export default connect(mapStateToProps, { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset, displayData })(MatchesContainer)
 
 
   // handleClick = () => {
   //   this.props.sitters.map(sitter => this.props.addMatches(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
   // }
+     // return this.props.sitters.map(sitter => this.props.renderCityAlkmaar(sitter.name, sitter.age, sitter.location, sitter.feeInEuros))
