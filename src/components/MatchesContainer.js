@@ -3,7 +3,8 @@ import Matches from './Matches'
 import { connect } from 'react-redux'
 import { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset } from '../actions/matches'
 import { displayData } from '../actions/displayData'
-import { selectName, deleteName } from '../actions/addFavorite'
+import { selectName } from '../actions/addFavorite'
+import { deleteFavorite } from '../actions/deleteFavorite'
 
 class MatchesContainer extends Component {
   toggleDisplay = () => {
@@ -39,7 +40,7 @@ class MatchesContainer extends Component {
   }
 
   deleteFavoriteSitter = (name) => {
-    this.props.deleteName(name);
+    this.props.deleteFavorite(name);
   }
 
   renderFavorites = () => {
@@ -83,4 +84,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset, displayData, selectName, deleteName })(MatchesContainer)
+export default connect(mapStateToProps, { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset, displayData, selectName, deleteFavorite })(MatchesContainer)

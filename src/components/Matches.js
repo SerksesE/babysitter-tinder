@@ -27,7 +27,6 @@ export default function Matches(props) {
             {props.renderFavorites()}
           </ul>
         </div>
-
         <div className='result'>
           <ul>
             {props.displayDataActive && props.renderMatches()}
