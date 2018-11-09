@@ -3,7 +3,7 @@ import Matches from './Matches'
 import { connect } from 'react-redux'
 import { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset } from '../actions/matches'
 import { displayData } from '../actions/displayData'
-import { selectName } from '../actions/addFavorite'
+import { selectName, deleteName } from '../actions/addFavorite'
 
 class MatchesContainer extends Component {
   toggleDisplay = () => {
@@ -35,7 +35,16 @@ class MatchesContainer extends Component {
   }
 
   addFavoriteSitter = (name, age, location, feeInEuros) => {
-    this.props.selectName(name, age, location, feeInEuros)
+    this.props.selectName(name, age, location, feeInEuros);
+  }
+
+  deleteFavoriteSitter = (name) => {
+    this.props.deleteName(name);
+  }
+
+  renderFavorites = () => {
+    return this.props.addFavorite.map(sitter => <li onClick={() => this.deleteFavoriteSitter(sitter.name)} className='sitter' key={sitter.id}>
+    {sitter.name} | {sitter.age} | {sitter.location} | {sitter.feeInEuros}</li>)
   }
 
   renderMatches = () => {
@@ -57,6 +66,9 @@ class MatchesContainer extends Component {
         renderCityAmsterdam={this.renderCityAmsterdam}
         renderCityHaarlem={this.renderCityHaarlem}
         renderReset={this.renderReset}
+        renderFavorites={this.renderFavorites}
+        addFavorite={this.props.addFavorite}
+        deleteFavorite={this.deleteFavoriteSitter}
       />
     )
   }
@@ -71,4 +83,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset, displayData, selectName })(MatchesContainer)
+export default connect(mapStateToProps, { renderCityAlkmaar, renderCityAmsterdam, renderCityRotterdam, renderCityHaarlem, renderReset, displayData, selectName, deleteName })(MatchesContainer)

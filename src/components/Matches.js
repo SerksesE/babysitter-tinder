@@ -3,6 +3,7 @@ import '../styles/matches.css'
 import { Link } from 'react-router-dom'
 
 export default function Matches(props) {
+  console.log(props.addFavorite)
   return (
     <div>
       <Link to={'/parentprofile'}><button>Profile page</button></Link>
@@ -19,6 +20,12 @@ export default function Matches(props) {
             <button onClick={() => props.renderCityHaarlem()}>Haarlem</button>
             <button onClick={() => props.renderReset()}>Total</button>
           </div>
+        </div>
+        <div>
+          <h2>How have {props.addFavorite.length} favorite sitters!</h2>
+          <ul>
+            {props.renderFavorites()}
+          </ul>
         </div>
 
         <div className='result'>
