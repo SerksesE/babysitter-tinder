@@ -35,7 +35,7 @@ li.sitter {
   align-content: space-between;
   align-items: center;
   border: 1px solid #ccc;
-  
+  cursor: pointer;
   padding: 12px 24px;
   font-size: 20px;
   font-weight: bold;
