@@ -28,6 +28,8 @@ h1.matches {
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 7px;
   font-size: 40px;
+  margin-top: -5px;
+  margin-bottom: -3px;
 }
 
 li.sitter {
@@ -41,6 +43,7 @@ li.sitter {
   font-weight: bold;
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 7px;
+  background: hsla(360, 100%, 100%, 0.75);
 }
 
 li.sitter:hover {
@@ -56,13 +59,12 @@ ul {
 }
 
 button {
-  /* flex: 1; */
   border: 1px solid red;
   font-size: 150%;
   margin: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: white;
+  background-color: hsla(360, 100%, 100%, 0.75);
   padding: 10px 20px;
 }
 
@@ -83,6 +85,12 @@ button:hover {
   display: flex;
 }
 
+
+body {
+  background-image: url('../images/background.png');
+  background-size: cover;
+}
+
 .parents:after {
   content: "";
   display: table;
@@ -101,4 +109,5 @@ button:hover {
 div.parents div.profile img.ava {
   align-content: center;
   padding-left: 100px
+
 }
