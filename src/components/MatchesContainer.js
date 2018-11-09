@@ -39,6 +39,7 @@ class MatchesContainer extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <Matches
         sitters={this.props.sitters}
@@ -61,7 +62,8 @@ const mapStateToProps = state => {
   return {
     sitters: state.matches,
     displayDataActive: state.displayData,
-    city: state.changeCityName.cityName
+    city: state.changeCityName.cityName,
+    addFavorite: state.addFavorite
   }
 }
 
