@@ -62,7 +62,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Jessica',
+    name: 'Roos',
     age: 27,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -72,7 +72,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Kim',
+    name: 'Liebeth',
     age: 17,
     feeInEuros: '10,-',
     yearsOfExperience: 4,
@@ -82,7 +82,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Anna',
+    name: 'Josephine',
     age: 37,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -92,7 +92,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Lisa',
+    name: 'Mimi',
     age: 47,
     feeInEuros: '10,-',
     yearsOfExperience: 4,
@@ -102,7 +102,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Rien',
+    name: 'Karin',
     age: 73,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -112,7 +112,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Asley',
+    name: 'Ashley',
     age: 41,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -122,7 +122,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Jessica',
+    name: 'Anne',
     age: 27,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -132,7 +132,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Kim',
+    name: 'Daisy',
     age: 17,
     feeInEuros: '10,-',
     yearsOfExperience: 4,
@@ -142,7 +142,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Anna',
+    name: 'Marja',
     age: 37,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -152,7 +152,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Lisa',
+    name: 'Johanne',
     age: 47,
     feeInEuros: '10,-',
     yearsOfExperience: 4,
@@ -162,7 +162,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Rien',
+    name: 'Elisa',
     age: 73,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -172,7 +172,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Asley',
+    name: 'Betsy',
     age: 41,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -182,7 +182,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Rien',
+    name: 'Hannie',
     age: 73,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
@@ -192,7 +192,7 @@ const initialState = [
     gender: 'Female',
     birthday: 'Decemeber 5, 1989'
   }, {
-    name: 'Asley',
+    name: 'Adine',
     age: 41,
     feeInEuros: '15,-',
     yearsOfExperience: 4,
