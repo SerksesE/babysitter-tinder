@@ -12,13 +12,13 @@ export default function Matches(props) {
       <div className='filtercontainer'>
         <div className='filter'>
           <div>
+            <button onClick={() => props.toggleDisplay()}>{props.displayDataActive ? 'Hide matches' : 'Show matches!'}</button>
             <button onClick={() => props.renderCityAlkmaar()}>Alkmaar</button>
             <button onClick={() => props.renderCityRotterdam()}>Rotterdam</button>
             <button onClick={() => props.renderCityAmsterdam()}>Amsterdam</button>
             <button onClick={() => props.renderCityHaarlem()}>Haarlem</button>
             <button onClick={() => props.renderReset()}>Total</button>
           </div>
-          <button onClick={() => props.toggleDisplay()}>{props.displayDataActive ? 'Hide matches' : 'Show matches!'}</button>
         </div>
 
         <div className='result'>

@@ -28,6 +28,8 @@ h1.matches {
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 7px;
   font-size: 40px;
+  margin-top: -5px;
+  margin-bottom: -3px;
 }
 
 li.sitter {
@@ -41,7 +43,7 @@ li.sitter {
   font-weight: bold;
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 7px;
-  background: white;
+  background: hsla(360, 100%, 100%, 0.75);
 }
 
 li.sitter:hover {
@@ -62,7 +64,7 @@ button {
   margin: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: white;
+  background-color: hsla(360, 100%, 100%, 0.75);
   padding: 10px 20px;
 }
 
