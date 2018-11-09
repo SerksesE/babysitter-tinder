@@ -70,11 +70,35 @@ button:hover {
   background-color: red;
 }
 
-.parents {
-  margin: 0 auto;
-  width: 30%;
-  text-align: center;
-  font-family: 'Advent Pro', sans-serif;
-  font-size: 20px;
+* {
+  box-sizing: border-box;
 }
 
+.parents {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 30px;
+  display: flex;
+}
+
+.parents:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile {
+  background-color: #E5E5E5;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 600px; 
+  flex: 1;
+}
+
+div.parents div.profile img.ava {
+  align-content: center;
+  padding-left: 100px
+}
