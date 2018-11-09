@@ -19,11 +19,9 @@ export class Parents extends Component {
           <p>I want my babysitter has: <b>{this.props.expYears}</b> year(s) experience</p>
           <p>I want my babysitter lives in Amsterdam: <b>{this.props.location}</b></p>
           <p>Let's Click on "Find Your Match" to see</p>
+          <Link to={'/matches'} ><button className='findmatch'>Find Your Match</button></Link>
           <img src={favour} className='ava' alt='favour' />
         </div>
-      </div>
-      <div>
-        <Link to={'/matches'} ><button onclick="findyourmatch">Find Your Match</button></Link>
       </div>
     </div>
   }
