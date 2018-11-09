@@ -17,7 +17,6 @@ signButton = () => {
 }
 
   render() {
-    console.log(this.showButton)
     return (
       <div className="App">
         <div>
